@@ -128,20 +128,5 @@ node src/app.js
 
 ---
 
-## Checking Git Credentials
-To view your Git credentials:
-
-1. Run this command to check the global credentials:
-   ```bash
-   git config --global user.name
-   git config --global user.email
-   ```
-2. If credentials are stored in a credential manager:
-   - **Windows**: Use Windows Credential Manager.
-   - **macOS**: Use Keychain Access.
-   - **Linux**: Check the `.git-credentials` file in your home directory.
-
----
-
 ## License
 MIT
