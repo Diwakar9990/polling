@@ -4,7 +4,7 @@ import { KafkaClient, Producer, Consumer } from 'kafka-node';
 const client = new KafkaClient({ kafkaHost: process.env.KAFKA_HOST });
 
 // Create Kafka producer
-export const producer = new Producer(client);
+const producer = new Producer(client);
 
 // Handle producer readiness or errors
 producer.on('ready', () => {
@@ -16,7 +16,7 @@ producer.on('error', (error) => {
 });
 
 // Create Kafka consumer
-export const consumer = new Consumer(
+const consumer = new Consumer(
     client,
     [{ topic: 'votes', partition: 0 }],
     { autoCommit: true } // Automatically commit offsets
@@ -27,4 +27,4 @@ consumer.on('error', (error) => {
     console.error('Error with Kafka Consumer:', error);
 });
 
-
+export { producer, consumer };
