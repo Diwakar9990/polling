@@ -125,8 +125,3 @@ node src/app.js
 ## Testing the Application
 1. Use Postman or a similar tool to test APIs.
 2. Use WebSocket clients like `websocat` or browser-based tools to test real-time updates.
-
----
-
-## License
-MIT
